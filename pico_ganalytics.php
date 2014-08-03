@@ -1,11 +1,11 @@
 <?php 
 /**
- * Pico Analytics
+ * Pico GAnalytics
  *
  * Adds Google Analytics to your pages
  *
  * @author Brice Boucard
- * @link https://github.com/bricebou/pico_SyntaxHighlighter
+ * @link https://github.com/bricebou/pico_ganalytics/
  * @license http://bricebou.mit-license.org/
  */
 
