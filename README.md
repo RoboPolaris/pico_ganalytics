@@ -18,8 +18,10 @@ Inside the `config.php` file:
 $config['GAnalytics']['trackingID'] = 'UA-53343030-1';
 /* Basic options */
 // Demographics and Interest Reports
+// (activated in Admin --> Property --> Property Settings)
 $config['GAnalytics']['demoint'] = true;
 //Enhanced link attribution
+// (activated in Admin --> Property --> Property Settings)
 $config['GAnalytics']['linkatt'] = true;
 ````
 
