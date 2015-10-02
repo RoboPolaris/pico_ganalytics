@@ -76,43 +76,43 @@ class PicoGAnalytics extends AbstractPicoPlugin
      * @param  array &$config array of config variables
      * @return void
      */
-    public function onConfigLoaded(&$config)
-    {
-        //Check configuration for enabled
-		if (isset($config['PicoGAnalytics']['enabled']) &&
-        $config['PicoGAnalytics']['enabled'] === false) {
-            //Set enabled state
-            $this->enabled = false;
-		}
-        //Check configuration for ID
-		if (isset($config['PicoGAnalytics']['trackingID'])) {
-            //Set ID
-            $this->googleTrackingId = $config['PicoGAnalytics']['trackingID'];
-		}
-        //Check configuration for Site Title
-		if (isset($config['site_title'])) {
-            //Set title
-            $this->siteTitle = $config['site_title'];
-		}
-        //Check configuration for Display Features option
-		if (isset($config['PicoGAnalytics']['displayFeatures']) &&
-        $config['PicoGAnalytics']['displayFeatures'] === true ) {
-            //Set option
-            $this->displayFeatures = true;
-		}
-        //Check configuration for Link Attribution option
-		if (isset($config['PicoGAnalytics']['linkAtt']) &&
-        $config['PicoGAnalytics']['linkAtt'] === true) {
-            //Set option
-            $this->linkAtt = true;
-		}
-        //Check configuration for Ecommerce option
-		if (isset($config['PicoGAnalytics']['ecommerce']) &&
-        $config['PicoGAnalytics']['ecommerce'] === true) {
-            //Set option
-            $this->ecommerce = true;
-		}
-    }
+     public function onConfigLoaded(&$config)
+     {
+         //Check configuration for enabled
+         if (isset($config['PicoGAnalytics']['enabled']) &&
+         $config['PicoGAnalytics']['enabled'] === false) {
+             //Set enabled state
+             $this->enabled = false;
+         }
+         //Check configuration for ID
+         if (isset($config['PicoGAnalytics']['trackingID'])) {
+             //Set ID
+             $this->googleTrackingId = $config['PicoGAnalytics']['trackingID'];
+         }
+         //Check configuration for Site Title
+         if (isset($config['site_title'])) {
+             //Set title
+             $this->siteTitle = $config['site_title'];
+         }
+         //Check configuration for Display Features option
+         if (isset($config['PicoGAnalytics']['displayFeatures']) &&
+         $config['PicoGAnalytics']['displayFeatures'] === true ) {
+             //Set option
+             $this->displayFeatures = true;
+         }
+         //Check configuration for Link Attribution option
+         if (isset($config['PicoGAnalytics']['linkAtt']) &&
+         $config['PicoGAnalytics']['linkAtt'] === true) {
+             //Set option
+             $this->linkAtt = true;
+         }
+         //Check configuration for Ecommerce option
+         if (isset($config['PicoGAnalytics']['ecommerce']) &&
+         $config['PicoGAnalytics']['ecommerce'] === true) {
+             //Set option
+             $this->ecommerce = true;
+         }
+     }
 
     /**
      * Triggered after Pico rendered the page
