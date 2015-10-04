@@ -31,7 +31,7 @@ class PicoGAnalytics extends AbstractPicoPlugin
      *
      * @see AbstractPicoPlugin::$enabled
      */
-    protected $enabled = true;
+    protected $enabled = false;
 
     /**
      * This plugin depends on no other plugins.
@@ -80,9 +80,9 @@ class PicoGAnalytics extends AbstractPicoPlugin
      {
          //Check configuration for enabled
          if (isset($config['PicoGAnalytics']['enabled']) &&
-         $config['PicoGAnalytics']['enabled'] === false) {
+         $config['PicoGAnalytics']['enabled'] === true) {
              //Set enabled state
-             $this->enabled = false;
+             $this->enabled = true;
          }
          //Check configuration for ID
          if (isset($config['PicoGAnalytics']['trackingID'])) {
