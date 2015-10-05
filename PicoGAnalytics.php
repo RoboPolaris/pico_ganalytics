@@ -9,7 +9,7 @@
  *
  * //PicoGAnalytics Configuration
  * $config['PicoGAnalytics'] = array(
- *     'enabled' => true,              //Enable PicoGAnalytics
+ *     'enabled' => false,              //Enable PicoGAnalytics
  *     'trackingID' => 'UA-XXXXXX-X',  //Your Property ID *required*
  *     'displayFeatures' => false,     //Option: Display Features
  *     'linkAtt' => false,             //Option: Link Attribution
@@ -70,7 +70,7 @@ class PicoGAnalytics extends AbstractPicoPlugin
     private $ecommerce = false;
 
     /**
-     * Triggered after Pico readed its configuration
+     * Triggered after Pico reads its configuration
      *
      * @see    Pico::getConfig()
      * @param  array &$config array of config variables
@@ -109,10 +109,10 @@ class PicoGAnalytics extends AbstractPicoPlugin
      }
 
     /**
-     * Triggered after Pico rendered the page
+     * Triggered after Pico renders the page
      *
      * @param  string &$output contents which will be sent to the user
-     * @return void
+     * @return string $output the modified contents sent to the user
      */
     public function onPageRendered(&$output)
     {
