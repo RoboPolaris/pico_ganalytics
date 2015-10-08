@@ -9,7 +9,7 @@
  *
  * //PicoGAnalytics Configuration
  * $config['PicoGAnalytics'] = array(
- *     'enabled' => true,              //Enable PicoGAnalytics
+ *     'enabled' => false,              //Enable PicoGAnalytics
  *     'trackingID' => 'UA-XXXXXX-X',  //Your Property ID *required*
  *     'displayFeatures' => false,     //Option: Display Features
  *     'linkAtt' => false,             //Option: Link Attribution
@@ -31,7 +31,7 @@ class PicoGAnalytics extends AbstractPicoPlugin
      *
      * @see AbstractPicoPlugin::$enabled
      */
-    protected $enabled = true;
+    protected $enabled = false;
 
     /**
      * This plugin depends on no other plugins.
@@ -70,7 +70,7 @@ class PicoGAnalytics extends AbstractPicoPlugin
     private $ecommerce = false;
 
     /**
-     * Triggered after Pico readed its configuration
+     * Triggered after Pico reads its configuration
      *
      * @see    Pico::getConfig()
      * @param  array &$config array of config variables
@@ -78,12 +78,6 @@ class PicoGAnalytics extends AbstractPicoPlugin
      */
      public function onConfigLoaded(&$config)
      {
-         //Check configuration for enabled
-         if (isset($config['PicoGAnalytics']['enabled']) &&
-         $config['PicoGAnalytics']['enabled'] === false) {
-             //Set enabled state
-             $this->enabled = false;
-         }
          //Check configuration for ID
          if (isset($config['PicoGAnalytics']['trackingID'])) {
              //Set ID
@@ -115,10 +109,10 @@ class PicoGAnalytics extends AbstractPicoPlugin
      }
 
     /**
-     * Triggered after Pico rendered the page
+     * Triggered after Pico renders the page
      *
      * @param  string &$output contents which will be sent to the user
-     * @return void
+     * @return string $output the modified contents sent to the user
      */
     public function onPageRendered(&$output)
     {
