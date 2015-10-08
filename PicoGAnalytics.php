@@ -9,7 +9,7 @@
  *
  * //PicoGAnalytics Configuration
  * $config['PicoGAnalytics'] = array(
- *     'enabled' => false,              //Enable PicoGAnalytics
+ *     'enabled' => true,              //Enable PicoGAnalytics
  *     'trackingID' => 'UA-XXXXXX-X',  //Your Property ID *required*
  *     'displayFeatures' => false,     //Option: Display Features
  *     'linkAtt' => false,             //Option: Link Attribution
