@@ -117,7 +117,7 @@ class PicoGAnalytics extends AbstractPicoPlugin
     public function onPageRendered(&$output)
     {
         // Inject the JavaScript in the page head.
-        $output = str_replace('</head>', (PHP_EOL . $this->build() . '</head>'), $output);
+        $output = str_replace('</body>', (PHP_EOL . $this->build() . '</body>'), $output);
     }
 
     /**
