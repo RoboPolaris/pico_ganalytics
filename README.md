@@ -12,6 +12,26 @@ This plugin will automatically add the Google Analytics tracking script to the <
 Place `PicoGAnalytics.php` file into the `plugins` directory.
 
 ## Configuration
+in Pico 2.0:
+
+Inside your `config/config.yml` file:
+
+```php
+
+##
+# PicoGAnalytics Configuration
+#
+PicoGAnalytics:
+    enabled: true                # Enable PicoGAnalytics
+    trackingID: UA-22590079-1    # Your Property ID *required*
+    displayFeatures: false       # Option: Display Features
+    linkAtt: false               # Option: Link Attribution
+    ecommerce: false             # Option: Ecommerce
+   
+```
+
+
+in Pico 1.0:
 
 Inside your `config/config.php` file:
 
